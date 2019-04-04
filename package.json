@@ -2,7 +2,7 @@
   "name": "thanos-snap",
   "version": "1.0.0",
   "description": "Using Thano's powerful snap he will take any data given to him return back only half.",
-  "main": "thanos.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +15,7 @@
     "snap",
     "half"
   ],
-  "author": "Travis Thompson",
+  "author": "Travis Thompson <travo100@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Travo100/thanos-snap/issues"

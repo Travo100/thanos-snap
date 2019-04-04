@@ -1,16 +1,39 @@
-const Thanos = require("./thanos");
-const myObj = {
-    name: "Bill",
-    email: "billy@bill.com",
-    cat: "dog"
-};
+class Thanos {
+    constructor() {
 
-console.log(Thanos.snap(0));
-console.log(Thanos.snap("TravisThompson"));
-console.log(Thanos.snap([1, 2, 3, 4]));
-console.log(Thanos.snap(myObj));
+    }
 
-console.log(Thanos.snap(1000));
-console.log(Thanos.snap("A quick brown fox jumps over the lazy dog"));
-console.log(Thanos.snap([5, 10, 1555, 2052, 221, "mom", "dad"]));
-console.log(Thanos.snap(myObj));
+    snap(data) {
+
+        if (data === undefined || data === null) {
+            return false;
+        }
+
+        if (typeof data === "number") {
+            return (data) / 2;
+        }
+
+        if (typeof data === "string") {
+            return data.slice(0, data.length / 2);
+        }
+
+        if (Array.isArray(data)) {
+            let snappedArr = [];
+            for (let i = 0; i < data.length / 2; i++) {
+                snappedArr.push(data[i]);
+            }
+            return snappedArr;
+        }
+
+        if (data === Object(data)) {
+            const keysArr = Object.keys(data);
+            for (let i = 0; i < keysArr.length / 2; i++) {
+                delete data[keysArr[i]];
+            }
+            return data;
+        }
+
+    }
+}
+
+module.exports = new Thanos();
