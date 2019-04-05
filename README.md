@@ -1,4 +1,6 @@
 # thanos-snap
+[![Build Status](https://travis-ci.com/Travo100/thanos-snap.svg?branch=master)](https://travis-ci.com/Travo100/thanos-snap)
+
 Using Thano's powerful snap he will take any data given to him return back only half.
 
 Example Usage
