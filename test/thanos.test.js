@@ -35,6 +35,16 @@ describe("thanos snap", function() {
     });
   });
 
+  it("should snap Object into into Object/2", function() {
+    const snappedValue = Thanos.snap({
+      name: "Jim",
+      realName: "Bean"
+    });
+    expect(snappedValue).eql({
+      name: "Jim"
+    });
+  });
+
   it("should snap a boolean(true) into null", function() {
     const snappedValue = Thanos.snap(true);
     expect(snappedValue).equal(null);
