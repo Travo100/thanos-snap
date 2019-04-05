@@ -17,3 +17,5 @@ Thanos.snap({
     sidekick: true, 
     mood: "Doesn't feel so good."
 });
+
+// returns { name: "Spider Man", realName: "Peter Parker"}
