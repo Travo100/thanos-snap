@@ -29,9 +29,24 @@ describe("thanos snap", function() {
       realName: "Peter Parker"
     });
   });
-});
 
-// console.log(Thanos.snap(4));
-// console.log(Thanos.snap("Iron Man"));
-// console.log(Thanos.snap([1, 2, 3, 4]));
-console.log(Thanos.snap());
+  it("should snap a boolean(true) into null", function() {
+    const snappedValue = Thanos.snap(true);
+    expect(snappedValue).equal(null);
+  });
+
+  it("should snap a boolean(false) into null", function() {
+    const snappedValue = Thanos.snap(true);
+    expect(snappedValue).equal(null);
+  });
+
+  it("should snap a undefined and return back undefined", function() {
+    const snappedValue = Thanos.snap();
+    expect(snappedValue).equal(undefined);
+  });
+
+  it("should snap a null and return back null", function() {
+    const snappedValue = Thanos.snap(null);
+    expect(snappedValue).equal(null);
+  });
+});

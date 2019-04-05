@@ -5,7 +5,11 @@ class Thanos {
 
   snap(data) {
     if (data === undefined || data === null) {
-      return false;
+      return data;
+    }
+
+    if (typeof data === "boolean") {
+      return null;
     }
 
     if (typeof data === "number") {
