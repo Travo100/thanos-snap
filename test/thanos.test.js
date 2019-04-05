@@ -17,6 +17,11 @@ describe("thanos snap", function() {
     expect(snappedValue).eql([1, 2]);
   });
 
+  it("should snap ['foo', 'bar'] into ['foo']", function() {
+    const snappedValue = Thanos.snap(["foo", "bar"]);
+    expect(snappedValue).eql(["foo"]);
+  });
+
   it("should snap Object into into Object/2", function() {
     const snappedValue = Thanos.snap({
       name: "Spider Man",
