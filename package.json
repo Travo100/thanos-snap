@@ -1,6 +1,6 @@
 {
   "name": "thanos-snap",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Using Thano's powerful snap he will take any data given to him return back only half.",
   "main": "index.js",
   "scripts": {
